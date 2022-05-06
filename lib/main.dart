@@ -33,12 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.deepPurple,
         title: Text(widget.title),
       ),
       body: SafeArea(
         child: Container(
-          color: Colors.deepOrange,
+          color: Colors.deepPurpleAccent,
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
