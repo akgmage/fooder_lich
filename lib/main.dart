@@ -39,6 +39,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: Container(
           color: Colors.deepPurpleAccent,
+          child: Column(
+            children: const [
+              Text('asd'),
+              Text('asd'),
+              Text('asd'),
+            ],
+          ),
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
