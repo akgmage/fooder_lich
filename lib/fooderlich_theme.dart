@@ -39,4 +39,13 @@ class FooderlichTheme {
       textTheme: lightTextTheme,
     );
   }
+
+  static ThemeData dark() {
+    return ThemeData(
+      brightness: Brightness.dark,
+      primaryColor: Colors.grey[900],
+      accentColor: Colors.green[600],
+      textTheme: lightTextTheme,
+    );
+  }
 }
