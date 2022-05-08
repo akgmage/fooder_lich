@@ -11,7 +11,7 @@ class FooderlichTheme {
         fontSize: 21.0, fontWeight: FontWeight.w700, color: Colors.black),
     headline3: GoogleFonts.openSans(
         fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.black),
-    headline4: GoogleFonts.openSans(
+    headline6: GoogleFonts.openSans(
         fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.black),
   );
 
@@ -24,17 +24,30 @@ class FooderlichTheme {
         fontSize: 21.0, fontWeight: FontWeight.w700, color: Colors.white),
     headline3: GoogleFonts.openSans(
         fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.white),
-    headline4: GoogleFonts.openSans(
+    headline6: GoogleFonts.openSans(
         fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.white),
   );
 
   static ThemeData light() {
     return ThemeData(
       brightness: Brightness.light,
-      primaryColor: Colors.white,
-      accentColor: Colors.black,
-      textSelectionTheme: const TextSelectionThemeData(
-        selectionColor: Colors.green,
+      checkboxTheme: CheckboxThemeData(
+        fillColor: MaterialStateColor.resolveWith(
+          (states) {
+            return Colors.black;
+          },
+        ),
+      ),
+      appBarTheme: const AppBarTheme(
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
+      ),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.black,
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        selectedItemColor: Colors.green,
       ),
       textTheme: lightTextTheme,
     );
@@ -43,9 +56,18 @@ class FooderlichTheme {
   static ThemeData dark() {
     return ThemeData(
       brightness: Brightness.dark,
-      primaryColor: Colors.grey[900],
-      accentColor: Colors.green[600],
-      textTheme: lightTextTheme,
+      appBarTheme: AppBarTheme(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.grey[900],
+      ),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.green,
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        selectedItemColor: Colors.green,
+      ),
+      textTheme: darkTextTheme,
     );
   }
 }
