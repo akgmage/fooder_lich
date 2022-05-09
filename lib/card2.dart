@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fooder_lich/fooderlich_theme.dart';
 import 'author_card.dart';
 
 class Card2 extends StatelessWidget {
@@ -16,11 +17,37 @@ class Card2 extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
         ),
         child: Column(
-          children: const [
-            AuthorCard(
-                authorName: 'Mike Katz',
-                title: 'Smoothie Connoisseur',
-                imageProvider: AssetImage('assets/author_katz.jpeg')),
+          children: [
+            const AuthorCard(
+              authorName: 'Mike Katz',
+              title: 'Smoothie Connoisseur',
+              imageProvider: AssetImage('assets/author_katz.jpeg'),
+            ),
+            Expanded(
+              child: Stack(
+                children: [
+                  Positioned(
+                    bottom: 16,
+                    right: 16,
+                    child: Text(
+                      'Recipe',
+                      style: FooderlichTheme.lightTextTheme.headline1,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 70,
+                    left: 16,
+                    child: RotatedBox(
+                      quarterTurns: 3,
+                      child: Text(
+                        'Smoothies',
+                        style: FooderlichTheme.lightTextTheme.headline1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
