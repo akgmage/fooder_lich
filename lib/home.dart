@@ -27,9 +27,11 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fooderlich',
-            // 2
-            style: Theme.of(context).textTheme.headline6),
+        title: Center(
+          child: Text('Fooderlich',
+              // 2
+              style: Theme.of(context).textTheme.headline6),
+        ),
       ),
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
