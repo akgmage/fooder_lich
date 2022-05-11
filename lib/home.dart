@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text('Fooderlich',
+          child: Text('Unknown App',
               // 2
               style: Theme.of(context).textTheme.headline6),
         ),
