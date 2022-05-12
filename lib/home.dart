@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fooder_lich/card1.dart';
-import 'card2.dart';
-import 'card3.dart';
+import 'package:fooder_lich/components/card1.dart';
+import 'components/card2.dart';
+import 'components/card3.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -41,15 +41,15 @@ class _HomeState extends State<Home> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Explore',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Author',
+            label: 'Recipes',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.card_giftcard),
-            label: 'Recipe',
+            label: 'To Buy',
           ),
         ],
       ),
